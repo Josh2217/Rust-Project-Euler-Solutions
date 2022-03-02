@@ -1,6 +1,10 @@
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
+use std::time::Instant;
+
 pub fn run(n: i32) {
+    let now = Instant::now();
+
     let mut a: i32;
     let mut b: i32 = 1;
     let mut c: i32 = 1;
@@ -15,5 +19,5 @@ pub fn run(n: i32) {
             sum += c;
         }
     }
-    println!("Solution 2: {}", sum);
+    println!("Solution   2: {sum} in {:.3?}", now.elapsed());
 }

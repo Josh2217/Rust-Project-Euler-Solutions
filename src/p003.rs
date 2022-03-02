@@ -1,8 +1,10 @@
 //What is the largest prime factor of the number 600851475143
 use crate::jotch;
 
+use std::time::Instant;
+
 pub fn run(n: i64) {
-    
+    let now = Instant::now();
     let mut max: i64 = 1;
     let mut i = 3;
     while i * i <= n {
@@ -16,6 +18,6 @@ pub fn run(n: i64) {
         }
         i += 2;
     }
-    println!("Solution 3: {}", max);
+    println!("Solution   3: {max} in {:.3?}", now.elapsed());
 }
 

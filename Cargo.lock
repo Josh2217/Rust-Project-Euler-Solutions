@@ -5,3 +5,12 @@ version = 3
 [[package]]
 name = "Rust-Project-Euler-Solutions"
 version = "0.1.0"
+dependencies = [
+ "intmap",
+]
+
+[[package]]
+name = "intmap"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae52f28f45ac2bc96edb7714de995cffc174a395fb0abf5bff453587c980d7b9"
