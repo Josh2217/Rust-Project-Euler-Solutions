@@ -1,8 +1,8 @@
-pub fn get_prime_factors(mut n: i32) -> Vec<i32> {
-    let mut i: i32 = 2;
-    let mut ans: Vec<i32> = vec![];
+pub fn get_prime_factors(mut n: i64) -> Vec<i64> {
+    let mut i: i64 = 2;
+    let mut ans: Vec<i64> = vec![];
     while i <= n {
-        if !iter_is_prime(i as i64){
+        if !iter_is_prime(i){
             i += 1;
             continue;
         }
@@ -17,15 +17,13 @@ pub fn get_prime_factors(mut n: i32) -> Vec<i32> {
     return ans;
 }
 
-pub fn pow(a: i32, b: i32) -> i32{
+pub fn pow(a: i64, b: i64) -> i64{
     let mut prod = 1;
     if b < 0 {
-        //integer arithmetic would round it down to 0
-        //will fail in the case of pow(1, -1)
-        0_i32
+        1 / pow(a, -b)
     }
     else {
-        for i in 0..b {
+        for _ in 0..b {
             prod *= a;
         }
         prod
