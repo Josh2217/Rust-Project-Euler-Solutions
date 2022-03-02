@@ -3,7 +3,7 @@ use crate::jotch;
 
 use std::time::Instant;
 
-pub fn run(n: i64) {
+pub fn solve(n: i64) {
     let now = Instant::now();
     let mut max: i64 = 1;
     let mut i = 3;

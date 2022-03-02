@@ -2,7 +2,7 @@
 
 use std::time::Instant;
 
-pub fn run(n: i32) {
+pub fn solve(n: i32) {
     let now = Instant::now();
 
     let mut a: i32;

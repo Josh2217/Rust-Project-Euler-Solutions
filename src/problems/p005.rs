@@ -5,8 +5,9 @@ use intmap::IntMap;
 use std::time::Instant;
 
 //this is very verbose, but also EXTREMELY fast for some reason
-pub fn run(a: i64, b: i64) {
+pub fn solve(a: i64, b: i64) {
     let now = Instant::now();
+
     let mut vec2d: Vec<Vec<i64>> = vec![];
     for i in a..(b + 1) {
         vec2d.push(jotch::get_prime_factors(i));

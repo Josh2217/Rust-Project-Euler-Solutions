@@ -1,3 +1,36 @@
+pub fn get_n_primes(n: i64) -> Vec<i64> {
+    let m = n as f64;
+    sieve((m * (m.ln() + m.ln().ln())).ceil() as usize)
+}
+
+//returns all primes less than N
+pub fn sieve(N: usize) -> Vec<i64> {
+    let mut ans = Vec::<i64>::new();
+    let mut arr: Vec<bool> = vec![true; N];
+    
+    let mut i: usize = 2;
+    while i * i <= N {
+        if arr[i] {
+            let mut j = 0;
+            while i * i + i * j < N {
+                arr[i * i + i * j] = false;
+                j += 1;
+            }
+        }
+        i += 1;
+    }
+
+    i = 2;
+    while i < N {
+        if arr[i] {
+            ans.push(i as i64);
+        }
+        i += 1;
+    }
+
+    ans
+}
+
 pub fn get_prime_factors(mut n: i64) -> Vec<i64> {
     let mut i: i64 = 2;
     let mut ans: Vec<i64> = vec![];
@@ -14,7 +47,7 @@ pub fn get_prime_factors(mut n: i64) -> Vec<i64> {
         i += 1;
     }
 
-    return ans;
+    ans
 }
 
 pub fn pow(a: i64, b: i64) -> i64{

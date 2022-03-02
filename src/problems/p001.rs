@@ -1,7 +1,7 @@
 //Find the sum of all the multiples of 3 or 5 below 1000.
 use std::time::Instant;
 
-pub fn run(n: i32) {
+pub fn solve(n: i32) {
     let now = Instant::now();
 
     let mut sum = 0;

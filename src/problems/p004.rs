@@ -2,7 +2,7 @@
 use crate::jotch;
 use std::time::Instant;
 
-pub fn run() {
+pub fn solve() {
     let now = Instant::now();
 
     let mut max = 0;
