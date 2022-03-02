@@ -15,7 +15,7 @@ pub fn iter_is_prime(n: i64) -> bool {
     }
 }
 
-pub fn max(a: i64, b: i64) -> i64 {
+pub fn max<T: std::cmp::PartialOrd>(a: T, b: T) -> T {
     if a > b {
         a
     }
